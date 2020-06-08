@@ -32,6 +32,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInsertDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInsertTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAboutProgramm = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -54,12 +60,20 @@
             this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.rtbNotepad = new System.Windows.Forms.RichTextBox();
-            this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmInsertDate = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmInsertTime = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnCreatePassword = new System.Windows.Forms.Button();
+            this.nudPasswordLength = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.clbPassword = new System.Windows.Forms.CheckedListBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tbInput = new System.Windows.Forms.TextBox();
+            this.tbOutput = new System.Windows.Forms.TextBox();
+            this.cbOutput = new System.Windows.Forms.ComboBox();
+            this.cbInput = new System.Windows.Forms.ComboBox();
+            this.btnSwap = new System.Windows.Forms.Button();
+            this.btnConvert = new System.Windows.Forms.Button();
+            this.cbMetrics = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -67,6 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPasswordLength)).BeginInit();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -97,6 +114,59 @@
             this.tsmExit.Text = "Exit";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
+            // notepadToolStripMenuItem
+            // 
+            this.notepadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmInsertDate,
+            this.tsmInsertTime,
+            this.toolStripMenuItem1,
+            this.tsmiSave,
+            this.tsmiLoad});
+            this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
+            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.notepadToolStripMenuItem.Text = "Notepad";
+            // 
+            // tsmInsertDate
+            // 
+            this.tsmInsertDate.Name = "tsmInsertDate";
+            this.tsmInsertDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.tsmInsertDate.Size = new System.Drawing.Size(255, 26);
+            this.tsmInsertDate.Text = "Insert date";
+            this.tsmInsertDate.Click += new System.EventHandler(this.tsmInsertData_Click);
+            // 
+            // tsmInsertTime
+            // 
+            this.tsmInsertTime.Name = "tsmInsertTime";
+            this.tsmInsertTime.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.tsmInsertTime.Size = new System.Drawing.Size(255, 26);
+            this.tsmInsertTime.Text = "Insert time";
+            this.tsmInsertTime.Click += new System.EventHandler(this.tsmInsertTime_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(252, 6);
+            // 
+            // tsmiSave
+            // 
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.tsmiSave.Size = new System.Drawing.Size(255, 26);
+            this.tsmiSave.Text = "Save";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            // 
+            // tsmiLoad
+            // 
+            this.tsmiLoad.Name = "tsmiLoad";
+            this.tsmiLoad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.tsmiLoad.Size = new System.Drawing.Size(255, 26);
+            this.tsmiLoad.Text = "Load";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -108,7 +178,7 @@
             // tsmAboutProgramm
             // 
             this.tsmAboutProgramm.Name = "tsmAboutProgramm";
-            this.tsmAboutProgramm.Size = new System.Drawing.Size(224, 26);
+            this.tsmAboutProgramm.Size = new System.Drawing.Size(207, 26);
             this.tsmAboutProgramm.Text = "About Programm";
             this.tsmAboutProgramm.Click += new System.EventHandler(this.tsmAboutProgramm_Click);
             // 
@@ -123,6 +193,8 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
@@ -145,7 +217,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 391);
+            this.tabPage2.Size = new System.Drawing.Size(792, 393);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Random Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -265,7 +337,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 391);
+            this.tabPage1.Size = new System.Drawing.Size(792, 393);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Counter";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -332,58 +404,192 @@
             this.rtbNotepad.TabIndex = 0;
             this.rtbNotepad.Text = "";
             // 
-            // notepadToolStripMenuItem
+            // tabPage4
             // 
-            this.notepadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmInsertDate,
-            this.tsmInsertTime,
-            this.toolStripMenuItem1,
-            this.tsmiSave,
-            this.tsmiLoad});
-            this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
-            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.notepadToolStripMenuItem.Text = "Notepad";
+            this.tabPage4.Controls.Add(this.tbPassword);
+            this.tabPage4.Controls.Add(this.btnCreatePassword);
+            this.tabPage4.Controls.Add(this.nudPasswordLength);
+            this.tabPage4.Controls.Add(this.label1);
+            this.tabPage4.Controls.Add(this.clbPassword);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(792, 393);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Passwords";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tsmInsertDate
+            // tbPassword
             // 
-            this.tsmInsertDate.Name = "tsmInsertDate";
-            this.tsmInsertDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.tsmInsertDate.Size = new System.Drawing.Size(255, 26);
-            this.tsmInsertDate.Text = "Insert date";
-            this.tsmInsertDate.Click += new System.EventHandler(this.tsmInsertData_Click);
+            this.tbPassword.Location = new System.Drawing.Point(303, 63);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(457, 22);
+            this.tbPassword.TabIndex = 4;
             // 
-            // tsmInsertTime
+            // btnCreatePassword
             // 
-            this.tsmInsertTime.Name = "tsmInsertTime";
-            this.tsmInsertTime.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.T)));
-            this.tsmInsertTime.Size = new System.Drawing.Size(255, 26);
-            this.tsmInsertTime.Text = "Insert time";
-            this.tsmInsertTime.Click += new System.EventHandler(this.tsmInsertTime_Click);
+            this.btnCreatePassword.Location = new System.Drawing.Point(303, 102);
+            this.btnCreatePassword.Name = "btnCreatePassword";
+            this.btnCreatePassword.Size = new System.Drawing.Size(75, 23);
+            this.btnCreatePassword.TabIndex = 3;
+            this.btnCreatePassword.Text = "Create";
+            this.btnCreatePassword.UseVisualStyleBackColor = true;
+            this.btnCreatePassword.Click += new System.EventHandler(this.btnCreatePassword_Click);
             // 
-            // toolStripMenuItem1
+            // nudPasswordLength
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(252, 6);
+            this.nudPasswordLength.Location = new System.Drawing.Point(8, 144);
+            this.nudPasswordLength.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nudPasswordLength.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudPasswordLength.Name = "nudPasswordLength";
+            this.nudPasswordLength.Size = new System.Drawing.Size(120, 22);
+            this.nudPasswordLength.TabIndex = 2;
+            this.nudPasswordLength.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
-            // tsmiSave
+            // label1
             // 
-            this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.tsmiSave.Size = new System.Drawing.Size(255, 26);
-            this.tsmiSave.Text = "Save";
-            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Length ";
             // 
-            // tsmiLoad
+            // clbPassword
             // 
-            this.tsmiLoad.Name = "tsmiLoad";
-            this.tsmiLoad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.L)));
-            this.tsmiLoad.Size = new System.Drawing.Size(255, 26);
-            this.tsmiLoad.Text = "Load";
-            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
+            this.clbPassword.CheckOnClick = true;
+            this.clbPassword.FormattingEnabled = true;
+            this.clbPassword.Items.AddRange(new object[] {
+            "Figures",
+            "Small letters",
+            "Main letters",
+            "Characters: %, *, (, ), !, @, #, ^, $, &, ~"});
+            this.clbPassword.Location = new System.Drawing.Point(8, 36);
+            this.clbPassword.Name = "clbPassword";
+            this.clbPassword.Size = new System.Drawing.Size(270, 89);
+            this.clbPassword.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.cbMetrics);
+            this.tabPage5.Controls.Add(this.tbInput);
+            this.tabPage5.Controls.Add(this.tbOutput);
+            this.tabPage5.Controls.Add(this.cbOutput);
+            this.tabPage5.Controls.Add(this.cbInput);
+            this.tabPage5.Controls.Add(this.btnSwap);
+            this.tabPage5.Controls.Add(this.btnConvert);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(792, 393);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Converter";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tbInput
+            // 
+            this.tbInput.Location = new System.Drawing.Point(37, 117);
+            this.tbInput.Name = "tbInput";
+            this.tbInput.Size = new System.Drawing.Size(100, 22);
+            this.tbInput.TabIndex = 4;
+            this.tbInput.Text = "1";
+            // 
+            // tbOutput
+            // 
+            this.tbOutput.Location = new System.Drawing.Point(309, 117);
+            this.tbOutput.Name = "tbOutput";
+            this.tbOutput.ReadOnly = true;
+            this.tbOutput.Size = new System.Drawing.Size(100, 22);
+            this.tbOutput.TabIndex = 3;
+            // 
+            // cbOutput
+            // 
+            this.cbOutput.AutoCompleteCustomSource.AddRange(new string[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.cbOutput.FormattingEnabled = true;
+            this.cbOutput.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.cbOutput.Location = new System.Drawing.Point(309, 68);
+            this.cbOutput.Name = "cbOutput";
+            this.cbOutput.Size = new System.Drawing.Size(121, 24);
+            this.cbOutput.TabIndex = 2;
+            this.cbOutput.Text = "mm";
+            // 
+            // cbInput
+            // 
+            this.cbInput.AutoCompleteCustomSource.AddRange(new string[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.cbInput.FormattingEnabled = true;
+            this.cbInput.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.cbInput.Location = new System.Drawing.Point(16, 68);
+            this.cbInput.Name = "cbInput";
+            this.cbInput.Size = new System.Drawing.Size(121, 24);
+            this.cbInput.TabIndex = 1;
+            this.cbInput.Text = "mm";
+            // 
+            // btnSwap
+            // 
+            this.btnSwap.Location = new System.Drawing.Point(187, 69);
+            this.btnSwap.Name = "btnSwap";
+            this.btnSwap.Size = new System.Drawing.Size(75, 23);
+            this.btnSwap.TabIndex = 0;
+            this.btnSwap.Text = "<->";
+            this.btnSwap.UseVisualStyleBackColor = true;
+            this.btnSwap.Click += new System.EventHandler(this.btnSwap_Click);
+            // 
+            // btnConvert
+            // 
+            this.btnConvert.Location = new System.Drawing.Point(187, 116);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(75, 23);
+            this.btnConvert.TabIndex = 0;
+            this.btnConvert.Text = "Convert";
+            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            // 
+            // cbMetrics
+            // 
+            this.cbMetrics.FormattingEnabled = true;
+            this.cbMetrics.Items.AddRange(new object[] {
+            "length",
+            "weight"});
+            this.cbMetrics.Location = new System.Drawing.Point(165, 22);
+            this.cbMetrics.Name = "cbMetrics";
+            this.cbMetrics.Size = new System.Drawing.Size(121, 24);
+            this.cbMetrics.TabIndex = 5;
+            this.cbMetrics.Text = "length";
+            this.cbMetrics.SelectedIndexChanged += new System.EventHandler(this.cbMetrics_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -406,6 +612,11 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPasswordLength)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,6 +655,20 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tsmiSave;
         private System.Windows.Forms.ToolStripMenuItem tsmiLoad;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckedListBox clbPassword;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Button btnCreatePassword;
+        private System.Windows.Forms.NumericUpDown nudPasswordLength;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox tbInput;
+        private System.Windows.Forms.TextBox tbOutput;
+        private System.Windows.Forms.ComboBox cbOutput;
+        private System.Windows.Forms.ComboBox cbInput;
+        private System.Windows.Forms.Button btnConvert;
+        private System.Windows.Forms.Button btnSwap;
+        private System.Windows.Forms.ComboBox cbMetrics;
     }
 }
 
