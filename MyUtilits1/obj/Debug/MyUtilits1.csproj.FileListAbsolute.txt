@@ -1,0 +1,10 @@
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\bin\Debug\MyUtilits1.exe.config
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\bin\Debug\MyUtilits1.exe
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\bin\Debug\MyUtilits1.pdb
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.csprojAssemblyReference.cache
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.MainForm.resources
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.Properties.Resources.resources
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.csproj.GenerateResource.cache
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.csproj.CoreCompileInputs.cache
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.exe
+C:\Users\roshu\source\repos\MiniProgs\MyUtilits1\obj\Debug\MyUtilits1.pdb
