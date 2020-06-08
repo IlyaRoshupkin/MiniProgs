@@ -36,12 +36,10 @@
             this.tsmAboutProgramm = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnMinus = new System.Windows.Forms.Button();
-            this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.btnRandomCopy = new System.Windows.Forms.Button();
+            this.btnRandomClear = new System.Windows.Forms.Button();
             this.tbRandom = new System.Windows.Forms.TextBox();
             this.nudMax = new System.Windows.Forms.NumericUpDown();
             this.nudMin = new System.Windows.Forms.NumericUpDown();
@@ -49,15 +47,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblRandom = new System.Windows.Forms.Label();
             this.btnRandom = new System.Windows.Forms.Button();
-            this.btnRandomClear = new System.Windows.Forms.Button();
-            this.btnRandomCopy = new System.Windows.Forms.Button();
-            this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.rtbNotepad = new System.Windows.Forms.RichTextBox();
+            this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInsertDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInsertTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -65,6 +74,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.notepadToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -98,7 +108,7 @@
             // tsmAboutProgramm
             // 
             this.tsmAboutProgramm.Name = "tsmAboutProgramm";
-            this.tsmAboutProgramm.Size = new System.Drawing.Size(207, 26);
+            this.tsmAboutProgramm.Size = new System.Drawing.Size(224, 26);
             this.tsmAboutProgramm.Text = "About Programm";
             this.tsmAboutProgramm.Click += new System.EventHandler(this.tsmAboutProgramm_Click);
             // 
@@ -112,69 +122,13 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 422);
             this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.lblCount);
-            this.tabPage1.Controls.Add(this.btnReset);
-            this.tabPage1.Controls.Add(this.btnMinus);
-            this.tabPage1.Controls.Add(this.btnPlus);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 393);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Counter";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCount.Location = new System.Drawing.Point(402, 125);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(27, 29);
-            this.lblCount.TabIndex = 1;
-            this.lblCount.Text = "0";
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnReset.Location = new System.Drawing.Point(516, 120);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(193, 38);
-            this.btnReset.TabIndex = 0;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnMinus.Location = new System.Drawing.Point(319, 194);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(193, 38);
-            this.btnMinus.TabIndex = 0;
-            this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPlus.Location = new System.Drawing.Point(319, 38);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(193, 38);
-            this.btnPlus.TabIndex = 0;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // tabPage2
             // 
@@ -191,10 +145,40 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 393);
+            this.tabPage2.Size = new System.Drawing.Size(792, 391);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Random Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(43, 244);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(145, 21);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "without repeatings";
+            this.cbRandom.UseVisualStyleBackColor = true;
+            // 
+            // btnRandomCopy
+            // 
+            this.btnRandomCopy.Location = new System.Drawing.Point(113, 285);
+            this.btnRandomCopy.Name = "btnRandomCopy";
+            this.btnRandomCopy.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomCopy.TabIndex = 8;
+            this.btnRandomCopy.Text = "Copy";
+            this.btnRandomCopy.UseVisualStyleBackColor = true;
+            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Location = new System.Drawing.Point(113, 334);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Clear";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
             // 
             // tbRandom
             // 
@@ -272,35 +256,134 @@
             this.btnRandom.UseVisualStyleBackColor = true;
             this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
-            // btnRandomClear
+            // tabPage1
             // 
-            this.btnRandomClear.Location = new System.Drawing.Point(113, 334);
-            this.btnRandomClear.Name = "btnRandomClear";
-            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
-            this.btnRandomClear.TabIndex = 7;
-            this.btnRandomClear.Text = "Clear";
-            this.btnRandomClear.UseVisualStyleBackColor = true;
-            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            this.tabPage1.Controls.Add(this.lblCount);
+            this.tabPage1.Controls.Add(this.btnReset);
+            this.tabPage1.Controls.Add(this.btnMinus);
+            this.tabPage1.Controls.Add(this.btnPlus);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(792, 391);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Counter";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnRandomCopy
+            // lblCount
             // 
-            this.btnRandomCopy.Location = new System.Drawing.Point(113, 285);
-            this.btnRandomCopy.Name = "btnRandomCopy";
-            this.btnRandomCopy.Size = new System.Drawing.Size(75, 23);
-            this.btnRandomCopy.TabIndex = 8;
-            this.btnRandomCopy.Text = "Copy";
-            this.btnRandomCopy.UseVisualStyleBackColor = true;
-            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCount.Location = new System.Drawing.Point(402, 125);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(27, 29);
+            this.lblCount.TabIndex = 1;
+            this.lblCount.Text = "0";
             // 
-            // cbRandom
+            // btnReset
             // 
-            this.cbRandom.AutoSize = true;
-            this.cbRandom.Location = new System.Drawing.Point(43, 244);
-            this.cbRandom.Name = "cbRandom";
-            this.cbRandom.Size = new System.Drawing.Size(145, 21);
-            this.cbRandom.TabIndex = 9;
-            this.cbRandom.Text = "without repeatings";
-            this.cbRandom.UseVisualStyleBackColor = true;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReset.Location = new System.Drawing.Point(516, 120);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(193, 38);
+            this.btnReset.TabIndex = 0;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnMinus.Location = new System.Drawing.Point(319, 194);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(193, 38);
+            this.btnMinus.TabIndex = 0;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPlus.Location = new System.Drawing.Point(319, 38);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(193, 38);
+            this.btnPlus.TabIndex = 0;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.rtbNotepad);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(792, 393);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Notepad";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // rtbNotepad
+            // 
+            this.rtbNotepad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbNotepad.Location = new System.Drawing.Point(0, 0);
+            this.rtbNotepad.Name = "rtbNotepad";
+            this.rtbNotepad.Size = new System.Drawing.Size(792, 393);
+            this.rtbNotepad.TabIndex = 0;
+            this.rtbNotepad.Text = "";
+            // 
+            // notepadToolStripMenuItem
+            // 
+            this.notepadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmInsertDate,
+            this.tsmInsertTime,
+            this.toolStripMenuItem1,
+            this.tsmiSave,
+            this.tsmiLoad});
+            this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
+            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.notepadToolStripMenuItem.Text = "Notepad";
+            // 
+            // tsmInsertDate
+            // 
+            this.tsmInsertDate.Name = "tsmInsertDate";
+            this.tsmInsertDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.tsmInsertDate.Size = new System.Drawing.Size(255, 26);
+            this.tsmInsertDate.Text = "Insert date";
+            this.tsmInsertDate.Click += new System.EventHandler(this.tsmInsertData_Click);
+            // 
+            // tsmInsertTime
+            // 
+            this.tsmInsertTime.Name = "tsmInsertTime";
+            this.tsmInsertTime.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.tsmInsertTime.Size = new System.Drawing.Size(255, 26);
+            this.tsmInsertTime.Text = "Insert time";
+            this.tsmInsertTime.Click += new System.EventHandler(this.tsmInsertTime_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(252, 6);
+            // 
+            // tsmiSave
+            // 
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.tsmiSave.Size = new System.Drawing.Size(255, 26);
+            this.tsmiSave.Text = "Save";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            // 
+            // tsmiLoad
+            // 
+            this.tsmiLoad.Name = "tsmiLoad";
+            this.tsmiLoad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.tsmiLoad.Size = new System.Drawing.Size(255, 26);
+            this.tsmiLoad.Text = "Load";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
             // 
             // MainForm
             // 
@@ -312,15 +395,17 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "My utilites";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMin)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,6 +436,14 @@
         private System.Windows.Forms.Button btnRandomClear;
         private System.Windows.Forms.Button btnRandomCopy;
         private System.Windows.Forms.CheckBox cbRandom;
+        private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmInsertDate;
+        private System.Windows.Forms.ToolStripMenuItem tsmInsertTime;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox rtbNotepad;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSave;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLoad;
     }
 }
 
